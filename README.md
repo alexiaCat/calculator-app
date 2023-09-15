@@ -34,4 +34,4 @@
 
 ## Demo en vivo
 
-Accede a la aplicación en vivo aquí: [CALCULATOR-APP en GitHub Pages](https://alexiacat.github.io/ng-pokeapi-app-responsive/)
+Accede a la aplicación en vivo aquí: [CALCULATOR-APP en GitHub Pages](/https://alexiacat.github.io/calculator-app/)
