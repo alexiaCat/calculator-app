@@ -1,11 +1,9 @@
-import React from 'react'
-
-export const Button = ({ label, onClick }) => {
+export const Button = ({ label, onClick, themeClass, isDeleteButton }) => {
+  const isResetButton = isDeleteButton && themeClass;
 
   return (
-    <button className="bg-black hover:bg-blue-500 text-white rounded-lg px-8 py-2" onClick={onClick}>
-      <p className="font-ibm-plex-mono text-[50px]">{label}</p>
+    <button className={`rounded-[15px] px-8 py-2 button ${themeClass} ${isResetButton ? 'reset' : ''}`} onClick={onClick}>
+      <p className="font-ibm-plex-mono  font-bold  text-[40px]">{label}</p>
     </button>
-
-  )
-}
+  );
+};

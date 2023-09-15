@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export const Theme = () => {
-    const [selectedTheme, setSelectedTheme] = useState('1');
+export const Theme = ({ onThemeChange }) => {
+    const [selectedTheme, setSelectedTheme] = useState('theme-three');
 
     const handleThemeChange = (theme) => {
         setSelectedTheme(theme);
-
+        onThemeChange(theme);
     };
 
-    const handleRadioChange = ({ target }) => {
-        const selectedValue = target.value;
-        setSelectedTheme(selectedValue);
-    };
 
     return (
         <div className="py-2">
@@ -23,25 +19,25 @@ export const Theme = () => {
                         type="radio"
                         className="h-full flex-grow radio-input"
                         name="theme"
-                        value="1"
-                        onChange={handleRadioChange}
-                        checked={selectedTheme === '1'}
+                        value="theme-one"
+                        onChange={() => handleThemeChange('theme-one')}
+                        checked={selectedTheme === 'theme-one'}
                     />
                     <input
                         type="radio"
                         className="h-full flex-grow radio-input"
                         name="theme"
-                        value="2"
-                        onChange={handleRadioChange}
-                        checked={selectedTheme === '2'}
+                        value="theme-two"
+                        onChange={() => handleThemeChange('theme-two')}
+                        checked={selectedTheme === 'theme-two'}
                     />
                     <input
                         type="radio"
                         className="h-full flex-grow radio-input"
                         name="theme"
-                        value="3"
-                        onChange={handleRadioChange}
-                        checked={selectedTheme === '3'}
+                        value="theme-three"
+                        onChange={() => handleThemeChange('theme-three')}
+                        checked={selectedTheme === 'theme-three'}
                     />
                 </div>
             </div>

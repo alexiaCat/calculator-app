@@ -20,3 +20,113 @@
 .radio-input:checked {
     background-color: orange;
 }
+
+
+
+/* Estilos para el tema 1 */
+
+.theme-one  {
+    background-color: #fad089;
+}
+
+.theme-one .body {
+    background-color: #ed303c;
+}
+
+.theme-one .button {
+    background-color: #ff9c5b;
+    color: #ed303c;
+    border-bottom: 7px solid #b45719;
+}
+
+.theme-one .button:hover {
+    background-color: #ffbf48; 
+}
+
+.theme-one .reset {
+    background-color: #f5626c;
+    border-bottom: 7px solid #a83c43;
+    color: #fff;
+}
+
+.theme-one .enter {
+    background-color: #3b8183;
+    border-bottom: 7px solid #184344;
+    color: #fff;
+}
+
+
+
+
+
+
+/* Estilos para el tema 2 */
+.theme-two {
+    background-color: #59b28f;
+}
+
+.theme-two .body {
+    background-color: #6c815b;
+}
+
+.theme-two .button {
+    background-color: #735438;
+    color: #beaf33;
+    border-bottom: 7px solid #3d2109;
+}
+
+.theme-two .button:hover {
+    background-color: #398d6b; 
+    color: #b9e295; 
+}
+
+.theme-two .reset {
+    background-color: #116e3f;
+    border-bottom: 7px solid #06301b;
+    color: #fff;
+}
+
+.theme-two .enter {
+    background-color: #beaf33;
+    border-bottom: 7px solid #6d6520;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* Estilos para el tema 3 */
+.theme-three {
+    background-color: #2a044a;
+}
+
+.theme-three .body {
+    background-color: #0b2e59;
+}
+
+.theme-three .button {
+    background-color: #0d6759;
+    color: #7ab317;
+    border-bottom: 7px solid #a0c55f;
+}
+
+.theme-three .button:hover {
+    background-color: #210836; 
+    color: #a0c55f; 
+}
+
+.theme-three .reset {
+    background-color: #ff6b6b;
+    border-bottom: 7px solid #e23e38;
+    color: #fff;
+}
+
+.theme-three .enter {
+    background-color: #7ab317;
+    border-bottom: 7px solid #0d6759;
+    color: #fff;
+}
+

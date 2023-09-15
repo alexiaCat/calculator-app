@@ -4,6 +4,16 @@ import { Theme, Display, Button } from './components';
 export const Calculator = () => {
     const [value, setValue] = useState("0");
     const [calculationHistory, setCalculationHistory] = useState("");
+    const [selectedTheme, setSelectedTheme] = useState('theme-three');
+   
+
+    const hoverColors = {
+        'theme-one': 'hover:bg-[#ffbf48]',
+        'theme-two': 'hover:bg-[#398d6b]',
+        'theme-three': 'hover:bg-[#210836]',
+      };
+
+      const hoverColor = hoverColors[selectedTheme];
 
     const buttonLabels = [
         "7", "8", "9", "DEL",
@@ -38,28 +48,46 @@ export const Calculator = () => {
         }
     };
 
+    const handleThemeChange = (theme) => {
+        setSelectedTheme(theme);
+    };
+
     return (
         <>
 
-            <div className="bg-blue-800 mx-auto h-screen">
+            <div className={`mx-auto h-screen ${selectedTheme}`}>
                 <div className="flex flex-col items-center justify-center h-full">
 
                     <div className="w-[30%]">
-                        <Theme />
-                        <Display value={value} />
-                        <div className="p-8 mt-4 bg-red-700 rounded-xl ">
+                        <Theme onThemeChange={handleThemeChange} />
+                        <Display
+                            value={value}
+                            themeClass={selectedTheme}
+                        />
+                        <div className={`p-8 mt-4 rounded-xl body ${selectedTheme}`}>
                             <div className="grid grid-cols-4 gap-6 mt-4 cursor-pointer">
                                 {buttonLabels.map((label) => (
-                                    <Button key={label} label={label} onClick={() => handleButtonClick(label)} />
+                                    <Button key={label}
+                                        label={label}
+                                        onClick={() => handleButtonClick(label)}
+                                        themeClass={selectedTheme}
+                                        isDeleteButton={label === 'DEL'}
+                                    />
                                 ))}
                             </div>
 
                             <div className="mt-8 flex justify-between">
-                                <button onClick={() => setValue("0")} className="bg-blue-700 border-b-4 w-[280px] border-blue-400 text-white rounded-lg px-8 py-2">
-                                    <p className="text-white text-[50px] font-ibm-plex-mono px-8">RESET</p>
+                                <button
+                                    onClick={() => setValue("0")}
+                                    className={`px-8 rounded-[15px] ${hoverColor}   w-[280px] py-2 reset ${selectedTheme}`}
+                                >
+                                    <p className="text-white  font-bold text-[40px] font-ibm-plex-mono px-8">RESET</p>
                                 </button>
-                                <button onClick={() => handleButtonClick("=")} className="bg-blue-700 border-b-4 w-[280px] border-blue-400 text-white rounded-lg px-8 py-2">
-                                    <p className="text-white text-[50px] font-ibm-plex-mono px-8">=</p>
+                                <button
+                                    onClick={() => handleButtonClick("=")}
+                                    className={`px-8 rounded-[15px] w-[280px]  ${hoverColor}  py-2 enter ${selectedTheme}`}
+                                >
+                                    <p className="text-white  font-bold  text-[40px] font-ibm-plex-mono px-8">=</p>
                                 </button>
                             </div>
                         </div>
