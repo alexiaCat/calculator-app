@@ -10,7 +10,7 @@ export const Theme = ({ onThemeChange }) => {
 
 
     return (
-        <div className="py-2">
+        <div className="py-2 mb-3">
             <p className="text-white text-right font-bold text-[25px]">1 &nbsp;2 &nbsp;3 &nbsp;</p>
             <div className="flex items-center">
                 <p className="text-white font-bold text-[25px] ml-auto">THEME &nbsp; &nbsp;</p>
