@@ -55,14 +55,14 @@ export const Calculator = () => {
         <>
             <div className={`mx-auto h-screen ${selectedTheme}`}>
                 <div className="flex flex-col items-center justify-center h-full">
-                <div className="sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[30%] 2xl:w-[30%]">
+                <div className="sm:w-[90%] md:w-[90%] lg:w-[70%] xl:w-[30%] 2xl:w-[30%]">
                         <Theme onThemeChange={handleThemeChange} />
                         <Display
                             value={value}
                             themeClass={selectedTheme}
                         />
                         <div className={`md:p-8 p-4  mt-4 rounded-xl body ${selectedTheme}`}>
-                        <div className="grid md:grid-cols-4 grid-cols-3 md:gap-6 gap-2 mt-4 cursor-pointer">
+                        <div className="grid grid-cols-4 md:gap-6 gap-2 mt-4 cursor-pointer">
                                 {buttonLabels.map((label) => (
                                     <Button key={label}
                                         label={label}
