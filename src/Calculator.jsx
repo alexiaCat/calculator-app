@@ -76,13 +76,13 @@ export const Calculator = () => {
                             <div className="mt-8 flex justify-between">
                                 <button
                                     onClick={() => setValue("0")}
-                                    className={`px-8 rounded-[15px] ${hoverColor} w-[140px] md:w-[280px] py-2 reset ${selectedTheme}`}
+                                    className={`px-8 rounded-[15px] ${hoverColor} w-[140px] md:w-[250px] py-2 reset ${selectedTheme}`}
                                 >
                                     <p className="text-white font-ibm-plex-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-8">RESET</p>
                                 </button>
                                 <button
                                     onClick={() => handleButtonClick("=")}
-                                    className={`px-8 rounded-[15px] w-[140px] md:w-[280px] ${hoverColor}  py-2 enter ${selectedTheme}`}
+                                    className={`px-8 rounded-[15px] w-[140px] md:w-[250px] ${hoverColor}  py-2 enter ${selectedTheme}`}
                                 >
                                     <p className="text-white font-ibm-plex-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-8">=</p>
                                 </button>
