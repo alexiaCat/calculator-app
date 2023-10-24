@@ -55,14 +55,14 @@ export const Calculator = () => {
         <>
             <div className={`mx-auto h-screen ${selectedTheme}`}>
                 <div className="flex flex-col items-center justify-center h-full">
-                <div className="sm:w-[90%] md:w-[90%] lg:w-[70%] xl:w-[30%] 2xl:w-[30%]">
+                <div className="sm:w-[90%] md:w-[90%] lg:w-[70%] xl:w-[40%] 2xl:w-[30%]">
                         <Theme onThemeChange={handleThemeChange} />
                         <Display
                             value={value}
                             themeClass={selectedTheme}
                         />
                         <div className={`md:p-8 p-4  mt-4 rounded-xl body ${selectedTheme}`}>
-                        <div className="grid grid-cols-4 md:gap-6 gap-2 mt-4 cursor-pointer">
+                        <div className="grid grid-cols-4 md:gap-3 gap-2 mt-4 cursor-pointer">
                                 {buttonLabels.map((label) => (
                                     <Button key={label}
                                         label={label}
@@ -76,15 +76,15 @@ export const Calculator = () => {
                             <div className="mt-8 flex justify-between">
                                 <button
                                     onClick={() => setValue("0")}
-                                    className={`md:px-8 px-1 rounded-[15px] ${hoverColor} w-[110px] mr-2 md:mr-0 md:w-[250px] py-2 reset ${selectedTheme}`}
+                                    className={`md:px-8 px-1 rounded-[15px] ${hoverColor} w-[110px]  md:w-[230px] mr-2 md:mr-0  py-2 reset ${selectedTheme}`}
                                 >
-                                    <p className="text-white font-ibm-plex-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-8">RESET</p>
+                                    <p className="text-white font-ibm-plex-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-6 md:px-2">RESET</p>
                                 </button>
                                 <button
                                     onClick={() => handleButtonClick("=")}
-                                    className={`md:px-8 px-1 rounded-[15px] w-[110px] md:w-[250px] ${hoverColor}  py-2 enter ${selectedTheme}`}
+                                    className={`md:px-8 px-1 rounded-[15px] w-[110px]  md:w-[230px]  ${hoverColor}  py-2 enter ${selectedTheme}`}
                                 >
-                                    <p className="text-white font-ibm-plex-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-8">=</p>
+                                    <p className="text-white font-ibm-plex-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-6 md:px-2">=</p>
                                 </button>
                             </div>
                         </div>
